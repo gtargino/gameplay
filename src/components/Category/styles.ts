@@ -20,17 +20,24 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     check: {
-        width: 10,
-        height: 10,
+        width: 14,
+        height: 14,
         backgroundColor: theme.colors.secondary100,
         alignSelf: 'flex-end',
-        marginRight: 7,
+        marginRight: 8,
         borderColor: theme.colors.secondary50,
-        borderWidth: 1,
+        borderWidth: 2,
         borderRadius: 3
     },
     checked: {
-
+        width: 14,
+        height: 14,
+        backgroundColor: theme.colors.primary,
+        alignSelf: 'flex-end',
+        marginRight: 8,
+        borderWidth: 2,
+        borderRadius: 3,
+        borderColor: theme.colors.secondary50
     },
     title: {
         fontFamily: theme.fonts.title500,
