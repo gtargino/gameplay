@@ -14,6 +14,11 @@ export const styles = StyleSheet.create({
         marginBottom: 42
     },
     content: {
-        
+        marginTop: 42
+    },
+    matches: {
+        marginLeft: 24,
+        marginTop: 24
     }
+
 });

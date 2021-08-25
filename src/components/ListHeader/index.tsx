@@ -8,7 +8,7 @@ type Props = {
     subtitle: string;
 }
 
-export default function ListHeader({title, subtitle}: Props) {
+export function ListHeader({title, subtitle}: Props) {
     return(
         <View style={styles.container}>
             <Text style={styles.title}>
