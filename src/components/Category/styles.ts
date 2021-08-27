@@ -13,34 +13,35 @@ export const styles = StyleSheet.create({
     content: {
         width: 100,
         height: 116,
-        backgroundColor: theme.colors.secondary40,
         borderRadius: 8,
+        paddingVertical: 20,
+        alignItems: 'center',
         justifyContent: 'space-between',
-        paddingVertical: 7,
-        alignItems: 'center'
     },
     check: {
+        top: 7,
+        left: 7,
         width: 14,
         height: 14,
-        backgroundColor: theme.colors.secondary100,
-        alignSelf: 'flex-end',
-        marginRight: 8,
-        borderColor: theme.colors.secondary50,
-        borderWidth: 2,
-        borderRadius: 3
-    },
-    checked: {
-        width: 14,
-        height: 14,
-        backgroundColor: theme.colors.primary,
-        alignSelf: 'flex-end',
-        marginRight: 8,
+        position: 'absolute',
         borderWidth: 2,
         borderRadius: 3,
-        borderColor: theme.colors.secondary50
+        borderColor: theme.colors.secondary40,
+        backgroundColor: theme.colors.secondary100,
+    },
+    checked: {
+        top: 7,
+        left: 7,
+        width: 14,
+        height: 14,
+        position: 'absolute',
+        backgroundColor: theme.colors.primary,
+        borderWidth: 2,
+        borderRadius: 3,
+        borderColor: theme.colors.secondary40
     },
     title: {
-        fontFamily: theme.fonts.title500,
+        fontFamily: theme.fonts.title700,
         color: theme.colors.heading,
         fontSize: 15
     }

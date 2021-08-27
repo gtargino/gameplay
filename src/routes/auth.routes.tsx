@@ -13,7 +13,7 @@ export function AuthRoutes() {
             screenOptions= {{
                 headerShown: false,
                 cardStyle: {
-                    backgroundColor: theme.colors.secondary100
+                    backgroundColor: theme.colors.secondary90
                 }
             }}
         >
