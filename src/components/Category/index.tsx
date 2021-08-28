@@ -31,7 +31,7 @@ export function Category({
             >
                 <LinearGradient
                     style={[styles.content, {opacity: checked ? 1 : 0.45 }]}
-                    colors={[checked ? secondary70 : secondary40, secondary40 ]}
+                    colors={[checked ? secondary70 : secondary40, secondary50 ]}
                 >
                     {
                         hasCheckBox &&

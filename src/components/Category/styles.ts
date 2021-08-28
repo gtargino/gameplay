@@ -19,8 +19,6 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     check: {
-        top: 7,
-        left: 7,
         width: 14,
         height: 14,
         position: 'absolute',
@@ -28,17 +26,19 @@ export const styles = StyleSheet.create({
         borderRadius: 3,
         borderColor: theme.colors.secondary40,
         backgroundColor: theme.colors.secondary100,
+        top: 7,
+        right: 7,
     },
     checked: {
-        top: 7,
-        left: 7,
         width: 14,
         height: 14,
         position: 'absolute',
         backgroundColor: theme.colors.primary,
         borderWidth: 2,
         borderRadius: 3,
-        borderColor: theme.colors.secondary40
+        borderColor: theme.colors.secondary40,
+        top: 7,
+        right: 7
     },
     title: {
         fontFamily: theme.fonts.title700,

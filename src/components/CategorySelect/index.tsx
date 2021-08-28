@@ -17,7 +17,7 @@ export function CategorySelect({ categorySelected, setCategory, hasCheckBox = fa
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={{
                 paddingLeft: 20,
-                paddingRight: 16,
+                paddingRight: 12,
                 minHeight: 120,
                 maxHeight: 120,
                 flexDirection:'row',
