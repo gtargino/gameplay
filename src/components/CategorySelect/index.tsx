@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 
 import { categories } from '../../utils/categories';
+import { styles } from './styles';
 import { Category } from '../Category';
 
 type Props = {
@@ -15,14 +16,8 @@ export function CategorySelect({ categorySelected, setCategory, hasCheckBox = fa
         <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{
-                paddingLeft: 20,
-                paddingRight: 12,
-                minHeight: 120,
-                maxHeight: 120,
-                flexDirection:'row',
-                alignItems:'center'
-            }}
+            style={styles.container}
+            contentContainerStyle={{ paddingRight: 38 }}
         >
             {
                 categories.map(category => (

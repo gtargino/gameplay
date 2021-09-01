@@ -6,6 +6,7 @@ import { styles } from './styles';
 
 import { CategorySelect } from '../../components/CategorySelect';
 import { AppointmentDetails } from '../AppointmentDetails';
+import { AppointmentCreate } from '../AppointmentCreate';
 import { Appointment } from '../../components/Appointment';
 import { ListDivisor } from '../../components/ListDivisor';
 import { Background } from '../../components/Background';
@@ -51,12 +52,16 @@ export function Home() {
     function handleAppointmentDetails() {
         navigation.navigate('AppointmentDetails');
     }
+    
+    function handleAppointmentCreate() {
+        navigation.navigate('AppointmentCreate');
+    }
 
     return (
         <Background>
             <View style={styles.header}>
                 <Profile />
-                <ButtonAdd />
+                <ButtonAdd onPress={handleAppointmentCreate}/>
             </View>
             <CategorySelect
                 categorySelected={category}
