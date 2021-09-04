@@ -23,7 +23,6 @@ export function ModalView({children, ...rest}: Props) {
                     </Background>
                 </View>
             </View>
-
         </Modal>
     );
 }
