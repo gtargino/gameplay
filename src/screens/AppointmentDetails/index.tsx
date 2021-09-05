@@ -24,9 +24,27 @@ export function AppointmentDetails() {
         },
         {
             id: '2',
-            username: 'Gustavo',
+            username: 'Last',
             avatar_url: 'https://github.com/gtargino.png',
             status: 'offline'
+        },
+        {
+            id: '3',
+            username: 'Gustavo',
+            avatar_url: 'https://github.com/gtargino.png',
+            status: 'online'
+        },
+        {
+            id: '4',
+            username: 'Last',
+            avatar_url: 'https://github.com/gtargino.png',
+            status: 'offline'
+        },
+        {
+            id: '5',
+            username: 'Last',
+            avatar_url: 'https://github.com/gtargino.png',
+            status: 'online'
         }
     ]
 
@@ -77,7 +95,6 @@ export function AppointmentDetails() {
                     title="Entrar na partida"
                 />
             </View>
-            
         </Background>
     );
 }

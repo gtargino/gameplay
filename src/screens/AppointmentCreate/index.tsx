@@ -25,6 +25,10 @@ export function AppointmentCreate() {
     function handleOpenGuilds() {
         setOpenGuildsModal(true);
     }
+
+    function handleCloseGuilds() {
+        setOpenGuildsModal(false);
+    }
     
     function handleGuildSelected(guildSelected: GuildProps) {
         setGuild(guildSelected);
@@ -40,7 +44,7 @@ export function AppointmentCreate() {
             <ScrollView>
                 <Background>
                     <Header
-                        title="Agenda partida"
+                        title="Agendar partida"
                     />
                     <Text style={[
                         styles.label,
@@ -76,7 +80,7 @@ export function AppointmentCreate() {
 
                         <View style={styles.field}> 
                             <View>
-                                <Text style={styles.label}>
+                                <Text style={[styles.label, {marginBottom: 12}]}>
                                     Dia e mês
                                 </Text>
                                 <View style={styles.column}>
@@ -88,7 +92,7 @@ export function AppointmentCreate() {
                                 </View>
                             </View>        
                             <View>
-                                <Text style={styles.label}>
+                                <Text style={[styles.label, {marginBottom: 12}]}>
                                     Horário
                                 </Text>
                                 <View style={styles.column}>
@@ -120,7 +124,7 @@ export function AppointmentCreate() {
                     </View>
                 </Background>
             </ScrollView>
-            <ModalView visible={openGuildsModal}>
+            <ModalView visible={openGuildsModal} closeModal={handleCloseGuilds}>
                 <Guilds handleGuildSelected={handleGuildSelected}/>
             </ModalView>
         </KeyboardAvoidingView>

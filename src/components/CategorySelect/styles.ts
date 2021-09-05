@@ -5,6 +5,6 @@ export const styles = StyleSheet.create({
         minHeight: 120,
         maxHeight: 120,
         paddingLeft: 22,
-        marginBottom: 30
+        marginBottom: 10
     }
 })

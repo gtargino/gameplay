@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     },
     form: {
         paddingHorizontal: 24,
-        marginTop: 2,
+        marginTop: 20,
     },
     select: {
         width:'100%',
