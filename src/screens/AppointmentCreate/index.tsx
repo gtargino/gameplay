@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, ScrollView, KeyboardAvoidingView } from 'react-native';
+import { Text, View, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 
@@ -40,7 +40,10 @@ export function AppointmentCreate() {
     }
 
     return(
-        <KeyboardAvoidingView>
+        <KeyboardAvoidingView
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            style={styles.container}
+        >
             <ScrollView>
                 <Background>
                     <Header
