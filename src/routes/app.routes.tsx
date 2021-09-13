@@ -8,7 +8,7 @@ import { Home } from '../screens/Home';
 import { AppointmentDetails } from '../screens/AppointmentDetails';
 import { AppointmentCreate } from '../screens/AppointmentCreate';
 
-export function AuthRoutes() {
+export function AppRoutes() {
     return(
         <Navigator
             screenOptions= {{
