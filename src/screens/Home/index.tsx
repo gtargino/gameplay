@@ -12,8 +12,6 @@ import { ButtonAdd } from '../../components/ButtonAdd';
 import { ListHeader } from '../../components/ListHeader';
 import { Background } from '../../components/Background';
 import { ListDivisor } from '../../components/ListDivisor';
-import { AppointmentCreate } from '../AppointmentCreate';
-import { AppointmentDetails } from '../AppointmentDetails';
 import { Appointment, AppointmentProps } from '../../components/Appointment';
 import { CategorySelect } from '../../components/CategorySelect';
 
@@ -46,7 +44,7 @@ export function Home() {
             setAppointments(storage);
         }
 
-        setLoading(false);
+        setLoading(false);  
     }
 
     useFocusEffect(useCallback(() => {
@@ -69,7 +67,7 @@ export function Home() {
                 <>
                     <ListHeader
                         title='Partidas agendadas'
-                        subtitle='Total 6'
+                        subtitle={ `Total ${appointments.length}` }
                     />
                     <FlatList
                         data={appointments}
