@@ -42,7 +42,7 @@ export function Member({data}: Props) {
                         ]}
                     />
                     <Text style={styles.nameStatus}>
-                        { isOnline ? 'Disponível' : 'Ocupado ' }
+                        { isOnline ? 'Disponível' : 'Ocupado' }
                     </Text>
                 </View>
             </View>
