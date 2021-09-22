@@ -1,7 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { theme } from '../global/styles/theme';
 const { Navigator, Screen } = createNativeStackNavigator();
 
 import { Home } from '../screens/Home';
@@ -12,8 +11,7 @@ export function AppRoutes() {
     return(
         <Navigator
             screenOptions= {{
-                headerShown: false,
-                
+                headerShown: false 
             }}
         >
             <Screen
