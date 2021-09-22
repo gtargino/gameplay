@@ -1,8 +1,8 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { theme } from '../global/styles/theme';
-const { Navigator, Screen } = createStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
 import { Home } from '../screens/Home';
 import { AppointmentDetails } from '../screens/AppointmentDetails';
@@ -13,9 +13,7 @@ export function AppRoutes() {
         <Navigator
             screenOptions= {{
                 headerShown: false,
-                cardStyle: {
-                    backgroundColor: theme.colors.secondary90
-                }
+                
             }}
         >
             <Screen

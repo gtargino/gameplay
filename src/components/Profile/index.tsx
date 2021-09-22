@@ -8,8 +8,6 @@ import { useAuth } from '../../hooks/auth';
 
 import { Avatar } from '../Avatar';
 
-
-
 export function Profile() {
     const { user, signOut }  = useAuth();
 
