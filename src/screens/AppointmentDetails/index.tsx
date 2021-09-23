@@ -3,14 +3,15 @@ import React, {useEffect, useState} from 'react';
 import { Fontisto } from '@expo/vector-icons';
 import { useRoute } from '@react-navigation/native';
 import { BorderlessButton } from 'react-native-gesture-handler';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { Alert, FlatList, ImageBackground, Text, View, Share, Platform } from 'react-native';
 import * as Linking from 'expo-linking';
 
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 import { api } from '../../services/api';
-import BannerImg from '../../assets/banner.png'
+//import BannerImg from '../../assets/banner.png'
+import BannerImg from '../../assets/mortal-kombat-24.jpg'
 
 import { Header } from '../../components/Header';
 import { Member, MemberProps } from '../../components/Member';
@@ -53,9 +54,6 @@ export function AppointmentDetails() {
     }
 
     function handleShareInvitation() {
-        console.log(Platform.OS);
-        console.log(widget);
-
         const message = Platform.OS === 'ios'
         ? `Junte-se a ${ guildSelected.guild.name }`
         : widget.instant_invite;
@@ -90,11 +88,11 @@ export function AppointmentDetails() {
                     </BorderlessButton>
                 }
             />
-
             <ImageBackground
                 source={BannerImg}
                 style={styles.banner}
             >
+            
                 <View style={styles.bannerContent}>
                     <Text style={styles.title}>
                         { guildSelected.guild.name }
@@ -104,7 +102,6 @@ export function AppointmentDetails() {
                     </Text>
                 </View>                   
             </ImageBackground>
-
             {
                 loading ? <Load /> :
                 <>
