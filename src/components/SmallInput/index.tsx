@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { TextInput, TextInputProps } from 'react-native';
 
 import { styles } from './styles';

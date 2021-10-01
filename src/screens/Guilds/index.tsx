@@ -19,7 +19,6 @@ export function Guilds({ handleGuildSelected }: Props) {
     async function fetchGuilds() {
         const response = await api.get('/users/@me/guilds');
         const ownerSevers = response.data.filter(server => server.owner);
-        console.log(ownerSevers);
 
         setGuilds(ownerSevers);
         setLoading(false);

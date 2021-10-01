@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Text, View, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { Text, View, KeyboardAvoidingView, Platform } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/core';
 import { Feather } from '@expo/vector-icons';
@@ -31,6 +32,20 @@ export function AppointmentCreate() {
     const [hour, setHour] = useState('');
     const [minute, setMinute] = useState('');
     const [description, setDescription] = useState('');
+
+    const days = fillDays(new Array(30));
+    const months = [
+        'JAN','FEV','MAR','ABR',
+        'MAI','JUN','JUL','AGO',
+        'SET','OUT','NOV','DEZ'
+    ];
+
+    function fillDays(d: number[]) {
+        for (let i = 0; i < d.length; i++) {
+            d[i] = i;
+        }
+        return d;
+    }
 
     const navigation = useNavigation();
 
@@ -74,7 +89,7 @@ export function AppointmentCreate() {
     return(
         <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-            style={styles.container}
+            
         >
             <ScrollView>
                 <Background>
@@ -119,17 +134,44 @@ export function AppointmentCreate() {
                                     Dia e mês
                                 </Text>
                                 <View style={styles.column}>
-                                    <SmallInput 
-                                        maxLength={2}
-                                        onChangeText={setDay}
-                                    />
-                                        <Text style={styles.divider}>
-                                            /
-                                        </Text>
-                                    <SmallInput
-                                        maxLength={2}
-                                        onChangeText={setMonth}
-                                    />
+                                    <ScrollView
+                                        style={styles.container}
+                                        showsVerticalScrollIndicator={false}
+                                    >
+                                        {
+                                            days.map(day => (
+                                                <Text
+                                                    style={styles.txt}
+                                                    key={day}
+                                                >
+                                                    { day }
+                                                </Text>
+                                            ))
+                                        }
+                                    </ScrollView>
+
+
+                                    
+                                    
+                                    <Text style={styles.divider}>
+                                        /
+                                    </Text>
+
+                                    <ScrollView
+                                        style={styles.container}
+                                        showsVerticalScrollIndicator={false}
+                                    >
+                                        {
+                                            months.map(m => (
+                                                <Text
+                                                    style={styles.txt}
+                                                    key={months.indexOf(m)}
+                                                >
+                                                    { m }
+                                                </Text>
+                                            ))
+                                        }
+                                    </ScrollView>
                                 </View>
                             </View>        
                             <View>
@@ -141,9 +183,9 @@ export function AppointmentCreate() {
                                         maxLength={2}
                                         onChangeText={setHour}
                                     />
-                                        <Text style={styles.divider}>
-                                            :
-                                        </Text>
+                                    <Text style={styles.divider}>
+                                        :
+                                    </Text>
                                     <SmallInput
                                         maxLength={2}
                                         onChangeText={setMinute}

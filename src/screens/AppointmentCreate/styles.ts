@@ -3,7 +3,20 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1
+        width: 60,
+        height: 60,
+        backgroundColor: theme.colors.secondary40,
+        color: theme.colors.heading,
+        borderRadius: 8,
+        marginRight: 4,
+        textAlign: 'center',
+        borderWidth: 1,
+        borderColor: theme.colors.secondary30
+    },
+    txt: {
+        textAlign: 'center',
+        color: theme.colors.heading,
+        fontSize: 20
     },
     form: {
         paddingHorizontal: 24,
